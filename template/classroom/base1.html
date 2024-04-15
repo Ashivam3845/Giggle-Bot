@@ -1,0 +1,78 @@
+{% extends 'classroom/base.html' %}
+{% load static %}
+
+{% block content %}
+    {% if messages %}
+        <div style="margin: 20px;" class="alert alert-primary alert-dismissible fade show" role="alert">
+            {% for message in messages %}
+                <div class="alert {% if message.tags %} alert-{{ message.tags }}{% endif %}">{{ message|safe }}</div>
+            {% endfor %}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endif %}
+
+    <div style="background-color: #007bff; color: #fff; padding: 20px; text-align: center;">
+        <h1 style="font-size: 32px;">Class Manager</h1>
+        <p>A Student-Teacher Portal</p>
+    </div>
+
+    <div style="margin: 20px;">
+        <h2>About Us</h2>
+        <p>Class Manager is a student-teacher portal with various classroom features like uploading assignments, submissions, Class Notice and many more. Students and Teacher can login in the portal and can experience interactive classroom experience online. One of the most powerful features of class manager is its student managing abilities. Teacher can easily manage their students and keep them updated about all of the activities in class.</p>
+    </div>
+
+    <div style="margin: 20px;">
+        <h2>Our Services</h2>
+        <div style="display: flex; justify-content: space-around;">
+            <div style="flex: 1; margin-right: 10px;">
+                <h3>For Teacher</h3>
+                <ul>
+                    <li>Teachers can add students in their class through Add Student option.</li>
+                    <li>After adding students in their class, Teachers can give or edit their class students marks.</li>
+                    <li>Teachers can also write notice which will be sent to all students in their class.</li>
+                    <li>Teachers can upload assignments through upload assignment options.</li>
+                    <li>Teachers can check their student's assignment submissions and give them marks accordingly.</li>
+                    <li>Students can message Teachers directly and their messages can be seen in Inbox.</li>
+                    <li>Teachers can also view all the marks given by them to a student by accessing their Marks profile and can edit their marks.</li>
+                    <li>User can add a profile picture through edit profile option.</li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin-left: 10px;">
+                <h3>For Student</h3>
+                <ul>
+                    <li>Students can log in to the portal and keep themselves updated on all the activities going on in the class.</li>
+                    <li>Students can see the notices given by their teacher in the Class Notice option.</li>
+                    <li>Students can download their assignments in the Assignments option and can also submit it there. (Once an assignment is submitted, it can't be changed later.)</li>
+                    <li>Students can contact any teacher through the message option in All Teachers List.</li>
+                    <li>Students can check their marks in the Marks option.</li>
+                    <li>User can add a profile picture through the edit profile option.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 20px;">
+        <h2>Digital Learning</h2>
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                <img style="max-width: 100%;" src="{% static 'images/mastery-based-education.PNG' %}" alt="">
+            </div>
+            <div style="flex: 2; padding-left: 20px;">
+                <p>We surveyed over 16,000 teachers and administrators to better understand the state of digital learning. Class Manager provides all facilities that are needed for improvising digital learning.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #007bff; color: #fff; padding: 20px; text-align: center;">
+        <h2>Are you ready to advance what's possible in education.</h2>
+        <h3>Then connect with us on social media.</h3>
+        <a style="color: #fff; margin-right: 10px;" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a style="color: #fff; margin-right: 10px;" href="#"><i class="fab fa-twitter"></i></a>
+        <a style="color: #fff; margin-right: 10px;" href="#"><i class="fab fa-instagram"></i></a>
+        <a style="color: #fff; margin-right: 10px;" href="#"><i class="fab fa-google"></i></a>
+        <a style="color: #fff;" href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+{% endblock %}
